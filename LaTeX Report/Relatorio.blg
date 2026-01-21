@@ -1,8 +1,8 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'Relatorio.blg'
-[111] biber-MSWIN64:342> INFO - === 
-[147] Biber.pm:421> INFO - Reading 'Relatorio.bcf'
-[272] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[102] biber-MSWIN64:342> INFO - === 
+[135] Biber.pm:421> INFO - Reading 'Relatorio.bcf'
+[273] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
 [292] bbl.pm:676> INFO - Writing 'Relatorio.bbl' with encoding 'UTF-8'
 [292] bbl.pm:779> INFO - Output to Relatorio.bbl
 [292] Biber.pm:132> WARN - The file 'Relatorio.bcf' does not contain any citations!
