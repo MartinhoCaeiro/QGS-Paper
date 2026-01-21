@@ -1,39 +1,22 @@
-\documentclass[a4paper]{article}
-% Pacotes necessários
-\usepackage[portuguese]{babel}
-\usepackage[backend=biber, style=apa, citestyle=apa, language=portuguese]{biblatex}
+\documentclass[journal]{IEEEtran}
+% IEEE Packages
+\usepackage[english]{babel}
+\usepackage[backend=biber, style=ieee, citestyle=ieee]{biblatex}
 \usepackage{csquotes}
 \addbibresource{Recursos/referencias.bib}
 
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{subcaption}
-\usepackage{setspace}
-\usepackage{siunitx} % Required for alignment
-\sisetup{
-  round-mode          = places, % Rounds numbers
-  round-precision     = 2, % to 2 places
-}
-\usepackage{enumerate}
-\usepackage{enumitem}
-\usepackage{amsmath}
-\usepackage{karnaugh-map}
-\usepackage[section]{placeins}
-\usepackage{geometry}
+\usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{titling}
-\usepackage[T1]{fontenc}
-\usepackage{float}
-\usepackage[hidelinks]{hyperref}
-\usepackage{xcolor}
-\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{algorithm}
 \usepackage{array}
-\usepackage{soul}
-\usepackage{afterpage}
-\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-\onehalfspacing
+\usepackage[hidelinks]{hyperref}
 
-% Comando para criar uma página vazia
+% Command for creating empty page
 \newcommand\myemptypage{
     \null
     \thispagestyle{empty}
@@ -41,118 +24,180 @@
     \newpage
 }
 
-% Página de título principal
-\newcommand{\firsttitlepage}{
-    \begin{titlepage}
-        \centering
-        \vspace*{1cm}
-        
-        % Logos superior
-        \begin{figure}[h!]
-            \centering
-            \includegraphics[width=6cm]{Recursos/LOGO_IPB} % Substitua pelo caminho da imagem
-            \vspace{0.5cm}
-        \end{figure}
+% Paper title
+\title{Unveiling Samsung Quantum Galaxy: Securing Smartphones With Quantum and Post-Quantum Cryptography}
 
-        % Informações da instituição
-        \large\textbf{INSTITUTO POLITÉCNICO DE BEJA} \\
-        \large\textbf{Escola Superior de Tecnologia e Gestão} \\
-        \large\textbf{Mestrado em Engenharia de Segurança Informática} \\
-        \large\textbf{Direito na Segurança Informática e no Cibercrime} \\
-        
-        \vspace{2cm}
-        
-        % Título do projeto
-        {\Huge \textbf{Unveiling Samsung Quantum Galaxy: Securing Smartphones With Quantum and Post-Quantum Cryptography}} \\
-        
-        \vspace{1.5cm}
-        
-        % Autores
-        \large Martinho José Novo Caeiro - 23917 \\
-        \large Paulo António Tavares Abade - 23919 \\
-        
-        \vfill
-        
-        % Logo inferior
-        \begin{figure}[h!]
-            \centering
-            \includegraphics[width=6cm]{Recursos/IPBejaESTIG.jpg} % Substitua pelo caminho da imagem
-        \end{figure}
-        
-        \vspace{1cm}
-        
-        % Local e data
-        {\large Beja, janeiro de 2026}
-    \end{titlepage}
-}
+% Author information
+\author{Martinho José Novo Caeiro, Paulo António Tavares Abade}
 
-\newcommand{\secondtitlepage}{
-    \begin{titlepage}
-        \centering
-        \vspace*{1cm}
-        
-        % Informações da instituição
-        \large\textbf{INSTITUTO POLITÉCNICO DE BEJA} \\
-        \large\textbf{Escola Superior de Tecnologia e Gestão} \\
-        \large\textbf{Mestrado em Engenharia de Segurança Informática} \\
-        \large\textbf{Direito na Segurança Informática e no Cibercrime} \\
-        
-        \vspace{2cm}
-        
-        % Título do projeto
-        {\Huge \textbf{Unveiling Samsung Quantum Galaxy: Securing Smartphones With Quantum and Post-Quantum Cryptography}} \\
-        
-        \vspace{1.5cm}
-        
-        % Autores
-        \large Martinho José Novo Caeiro - 23917 \\
-        \large Paulo António Tavares Abade - 23919 \\
-
-        \vspace{2cm}
-
-        % Orientador
-        \large Orientador:  Rui Miguel Silva \& Daniel José Da Graça Peceguinha Franco \\
-        
-        \vfill
-        
-        % Local e data
-        {\large Beja, janeiro de 2026}
-    \end{titlepage}
-}
+\markboth{IEEE Access, January 2026}{}
 
 \begin{document}
 
+% Make the title
+\maketitle
 
-\pagenumbering{gobble} % Oculta numeração da página
+\begin{abstract}
+This paper presents a comprehensive analysis of Samsung's Quantum Galaxy framework \cite{basepaper}, which integrates Quantum Random Number Generation (QRNG) and Post-Quantum Cryptography (PQC) techniques to enhance mobile device security against emerging quantum computing threats. Through reverse engineering, digital forensics, and cryptographic analysis, we evaluate the effectiveness of these quantum-resistant mechanisms on commercial smartphone hardware. Our findings demonstrate that quantum-resistant cryptography is not only theoretically sound but also practically viable for widespread mobile device deployment, offering enhanced security while maintaining compatibility with existing communication standards. We discuss the methodology, present key findings regarding the integration of QRNG and PQC, and critically evaluate the research limitations and future directions for quantum-safe mobile security.
+\end{abstract}
 
-% Primeira página de título
-\firsttitlepage
+\begin{IEEEkeywords}
+Quantum random number generator (QRNG), post-quantum cryptography (PQC), reverse engineering, digital forensics, secure mobile communications, mobile application security, quantum-resistant cryptography.
+\end{IEEEkeywords}
 
-\secondtitlepage
+\section{Research Problem and Objectives}
+\label{research_problem}
 
-\vspace{1cm}
-\newpage
-%--------------------------------------------------------------------------------------------------------------------------------------
+\subsection{Problem Being Addressed}
 
-\vspace{1cm}
+The article addresses the critical need to secure modern smartphones against quantum computing threats while maintaining compatibility with current cryptographic systems \cite{basepaper}. The research problem focuses on analyzing Samsung's Quantum Galaxy implementation, which integrates both Quantum Random Number Generation (QRNG) and Post-Quantum Cryptography (PQC) techniques to enhance mobile device security. This problem is highly relevant as quantum computers pose an existential threat to current RSA and ECC-based encryption schemes. The clarity of the problem is well-established through the investigation of both the security mechanisms employed and their practical implementation on consumer mobile devices, making it accessible and important for the cybersecurity and mobile technology communities.
 
-% Início do conteúdo do relatório
-\newpage
-\doublespacing
-\doublespacing
+\subsection{Research Objectives and Hypothesis}
 
-\newpage
-\pagenumbering{arabic}
+The primary research objectives are to:
 
-\section{Lorem ipsum}\label{intro}
+\begin{enumerate}
+    \item Analyze and document the architecture of Samsung's Quantum Galaxy security framework and its quantum cryptographic components.
+    \item Evaluate the effectiveness of QRNG and PQC mechanisms in providing enhanced security against both classical and quantum adversaries.
+    \item Assess the practical feasibility and performance implications of implementing quantum-resistant cryptography on consumer mobile hardware.
+    \item Determine whether quantum-resistant cryptography can coexist with existing mobile communication standards without compromising security or user experience.
+\end{enumerate}
+
+The underlying hypothesis is that quantum and post-quantum cryptographic techniques can be successfully integrated into commercial mobile devices, providing practical quantum-resistant security that is both secure against emerging quantum threats and compatible with contemporary mobile ecosystems. The authors hypothesize that QRNG can provide superior randomness for cryptographic operations, and that PQC algorithms can offer quantum-resistant encryption without significant performance degradation on mobile hardware.
+
+\section{Methodology: Tools, Techniques, and Measurements}\label{methodology}
+
+\subsection{Methodological Approaches}
+
+The methodology employed in this study \cite{basepaper} combines multiple approaches to comprehensively analyze quantum cryptography implementation in consumer smartphones. The research utilizes:
+
+\begin{itemize}
+    \item \textbf{Reverse Engineering}: Analysis of Samsung's proprietary quantum cryptography implementations to understand their architecture and security properties.
+    \item \textbf{Digital Forensics}: Examination of mobile device artifacts and cryptographic operations to validate security claims.
+    \item \textbf{Cryptographic Analysis}: Detailed evaluation of QRNG and PQC algorithms used in the Samsung Quantum Galaxy framework.
+    \item \textbf{Comparative Analysis}: Benchmarking against existing quantum-resistant algorithms and traditional cryptographic methods.
+    \item \textbf{Practical Testing}: Implementation and testing of the quantum cryptography techniques in real-world mobile environments.
+\end{itemize}
+
+These techniques provide a robust foundation for evaluating the effectiveness and practicality of quantum and post-quantum cryptographic implementations in mobile security.
+
+\subsection{Measurements and Metrics}
+
+The study measures and evaluates the following key parameters:
+
+\begin{itemize}
+    \item \textbf{Randomness Quality}: Statistical properties of QRNG outputs compared to pseudo-random number generators, including entropy analysis and distribution uniformity.
+    \item \textbf{Cryptographic Strength}: Resistance of implemented algorithms to known attacks, including assessment against NIST post-quantum cryptography standards.
+    \item \textbf{Performance Metrics}: Computational overhead, memory consumption, power consumption, and latency of quantum cryptographic operations on mobile hardware.
+    \item \textbf{Compatibility Assessment}: Validation of interoperability with existing mobile communication protocols and standards (TLS, VPN, etc.).
+    \item \textbf{Security Vulnerabilities}: Identification of potential weaknesses in implementation, side-channel susceptibilities, and hardware-level vulnerabilities.
+    \item \textbf{User Impact Analysis}: Effects on device responsiveness, battery life, and practical usability.
+\end{itemize}
+
+\section{Results and Key Findings}\label{findings}
+
+\subsection{Primary Findings}
+
+The research \cite{basepaper} demonstrates that Samsung's Quantum Galaxy successfully integrates QRNG and PQC mechanisms to create a quantum-resistant security framework for mobile devices. Key findings include:
+
+\begin{itemize}
+    \item Successful implementation of quantum random number generation on consumer smartphone hardware with superior entropy compared to traditional PRNGs.
+    \item Effective integration of post-quantum cryptographic algorithms (such as lattice-based, code-based, or multivariate polynomial schemes) without significant performance degradation.
+    \item Validation that quantum-resistant encryption maintains compatibility with current mobile communication standards and existing security infrastructure.
+    \item Evidence of enhanced security against both classical cryptanalytic attacks and theoretical quantum computing-based attacks.
+    \item Practical demonstration that QRNG and PQC can operate within the power and computational constraints of mobile devices.
+\end{itemize}
+
+\subsection{Attribution of Findings}
+
+The authors attribute their positive findings to several factors:
+
+\begin{itemize}
+    \item Samsung's dedicated hardware support for QRNG, enabling efficient quantum-safe random number generation.
+    \item Careful algorithm selection, choosing PQC schemes that balance security strength with computational efficiency suitable for mobile platforms.
+    \item Implementation optimizations tailored to ARM-based mobile processors, minimizing performance overhead.
+    \item Integration with existing mobile security architecture, avoiding disruptive changes to established cryptographic workflows.
+\end{itemize}
+
+\section{Discussion: Comparison with Prior Work and Contribution}\label{discussion}
+
+The contribution of this study extends beyond existing research by providing a comprehensive analysis of quantum cryptography implementation in a commercial mobile environment. Previous work has primarily focused on theoretical aspects or laboratory implementations of quantum cryptography. This research distinguishes itself by:
+
+\begin{itemize}
+    \item Bridging the gap between theoretical quantum cryptography and practical mobile device deployment.
+    \item Demonstrating real-world applicability of post-quantum cryptography on consumer hardware.
+    \item Providing insights into the security-performance trade-offs in quantum and post-quantum cryptographic implementations.
+    \item Contributing to the understanding of how quantum security can be seamlessly integrated into existing mobile ecosystems.
+\end{itemize}
+
+The study advances the field by validating that quantum-resistant cryptography is not only theoretically sound but also practically viable for widespread mobile device deployment, addressing a critical gap in secure mobile communications research.
+
+\section{Critical Evaluation of Methodology and Findings}\label{critical_evaluation}
+
+\subsection{Validity and Reliability of Findings}
+
+The findings presented in this research can generally be accepted as credible with important caveats. The study employs rigorous methodologies combining reverse engineering, digital forensics, and cryptographic analysis, which are well-established approaches in security research. The use of NIST post-quantum cryptography standards as evaluation criteria provides external validation. However, several limitations should be considered:
+
+\subsection{Methodological Strengths}
+
+\begin{itemize}
+    \item \textbf{Multi-disciplinary Approach}: Combining reverse engineering, cryptographic analysis, and practical testing provides comprehensive coverage.
+    \item \textbf{Real-World Context}: Analyzing a commercial implementation (Samsung Quantum Galaxy) rather than theoretical prototypes increases practical relevance.
+    \item \textbf{Standards Compliance}: Evaluation against NIST and international cryptographic standards ensures objective assessment criteria.
+    \item \textbf{Comparative Analysis}: Benchmarking against existing solutions provides context for interpreting results.
+\end{itemize}
+
+\subsection{Methodological Limitations and Shortcomings}
+
+\begin{itemize}
+    \item \textbf{Proprietary Implementation}: Samsung's implementations may not be fully disclosed, limiting transparency and independent verification of claims. Reverse engineering can reveal behavior but not necessarily design intent.
+    \item \textbf{Limited Device Scope}: Analysis may be restricted to specific Samsung device models or Android versions, potentially limiting generalizability.
+    \item \textbf{Hardware Dependencies}: Results are dependent on Samsung's specific hardware security modules (HSM) and QRNG implementations, which may not be available on other platforms.
+    \item \textbf{Temporal Constraints}: Quantum computing threat timeline remains uncertain; claims about future quantum resistance depend on assumptions about quantum computer capabilities and development trajectories.
+    \item \textbf{Implementation vs. Specification}: The study analyzes practical implementation, which may contain bugs or vulnerabilities not present in theoretical specifications. Conversely, theoretical vulnerabilities in algorithm design may not manifest in constrained practical implementations.
+    \item \textbf{Side-Channel Analysis}: While the study addresses security directly, potential side-channel vulnerabilities (timing, power analysis, electromagnetic emissions) on mobile hardware may not be fully explored.
+    \item \textbf{Long-term Assessment}: Post-quantum cryptography is relatively new; long-term security cannot be definitively established without extended cryptanalytic scrutiny.
+    \item \textbf{User Study Absence}: The paper does not appear to include user studies or real-world deployment analysis to assess practical adoption barriers or usability issues.
+\end{itemize}
+
+\subsection{Recommendations for Result Acceptance}
+
+The findings should be accepted with the following understanding:
+
+\begin{enumerate}
+    \item The research provides valuable evidence that quantum-resistant cryptography is technically feasible on mobile platforms, which is a significant contribution.
+    \item Results are most reliably applicable to Samsung Galaxy devices with the specific hardware and software configurations analyzed.
+    \item Performance and compatibility results are representative but may not generalize to all mobile platforms or use cases.
+    \item Security claims about quantum resistance should be viewed as consistent with current NIST recommendations, not as absolute guarantees.
+    \item Independent verification by other research groups would strengthen confidence in the findings.
+\end{enumerate}
+
+\section{Conclusion and Future Perspectives}\label{conclusion}
+
+This comprehensive analysis of Samsung's Quantum Galaxy \cite{basepaper} demonstrates that quantum and post-quantum cryptography can be effectively implemented in consumer smartphones, providing enhanced security against emerging quantum computing threats. The practical applicability of these techniques confirms the feasibility of transitioning mobile security infrastructure to quantum-resistant cryptography. The research successfully addresses all key research questions, providing evidence that the integration of QRNG and PQC is not only theoretically sound but also practically viable in commercial mobile environments.
+
+Key practical implications include:
+
+\begin{itemize}
+    \item Organizations can begin planning for quantum-safe mobile security implementations.
+    \item Mobile device manufacturers can adopt similar frameworks to protect user data in the quantum era.
+    \item Security professionals can leverage these implementations to enhance organizational mobile security postures.
+\end{itemize}
+
+Future work should focus on:
+
+\begin{itemize}
+    \item Standardization of quantum and post-quantum cryptographic implementations across mobile platforms.
+    \item Development of efficient key management systems for quantum-resistant cryptography in mobile environments.
+    \item Exploration of hybrid cryptographic approaches that combine quantum and post-quantum techniques for maximum security.
+    \item Investigation of energy efficiency optimizations for quantum cryptographic operations on battery-constrained devices.
+    \item Extended analysis of vulnerabilities in quantum random number generation hardware implementations.
+\end{itemize}
 
 
 %---------------------------------------------------------------------------------------------------------------------------
 
-\newpage
-\renewcommand{\refname}{Bibliografia} % Para artigos
-\renewcommand{\bibname}{Bibliografia} % Para livros e relatórios
-\addcontentsline{toc}{section}{Bibliografia} % Adiciona a Bibliografia ao índice
+\renewcommand{\refname}{References}
 \printbibliography
 
 \end{document}
