@@ -1,11 +1,12 @@
 # Fdb version 4
-["biber Relatorio"] 1769106978.47851 "Relatorio.bcf" "Relatorio.bbl" "Relatorio" 1769107006.01926 2
-  "Relatorio.bcf" 1769107005 108071 22f1cb08516c04e65a1eea559bb9556a "pdflatex"
+["biber Relatorio"] 1769107061.73562 "Relatorio.bcf" "Relatorio.bbl" "Relatorio" 1769107075.19534 0
+  "Recursos/referencias.bib" 1769027447 339 6bb2daabe27c317d2ef80739c735c64e ""
+  "Relatorio.bcf" 1769107074 107879 aab53d926b6deee7c7810b7a8f50e369 "pdflatex"
   (generated)
   "Relatorio.bbl"
   "Relatorio.blg"
   (rewritten before read)
-["pdflatex"] 1769107002.61203 "c:/Users/Marti/Documents/QGS-Paper/LaTeX Report/Relatorio.tex" "Relatorio.pdf" "Relatorio" 1769107006.02116 2
+["pdflatex"] 1769107071.76875 "c:/Users/Marti/Documents/QGS-Paper/LaTeX Report/Relatorio.tex" "Relatorio.pdf" "Relatorio" 1769107075.19726 2
   "C:/Users/Marti/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1769026751 82794 3356c8c6c52528dda375b8aed03f628e ""
   "C:/Users/Marti/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1730970145 11948315 99c4d2326d981d6683364617ad651fdf ""
   "C:/Users/Marti/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -25,7 +26,6 @@
   "C:/Users/Marti/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1233951854 908 2921f8a10601f252058503cc6570e581 ""
   "C:/Users/Marti/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1233951854 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "C:/Users/Marti/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
-  "C:/Users/Marti/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/Marti/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb" 1136853348 44729 fea0975e20ec51c992338362f05f1146 ""
   "C:/Users/Marti/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb" 1136853348 44656 0cbca70e0534538582128f6b54593cca ""
   "C:/Users/Marti/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb" 1136853348 46026 687528a208fbfc1f00832bb96cccebbb ""
@@ -118,11 +118,11 @@
   "C:/Users/Marti/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/Marti/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1718356376 14067 1383bd6ee23ab18ae0e796155404deb7 ""
   "C:/Users/Marti/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "Relatorio.aux" 1769107005 7166 e66d3bc891f56aafb67c95ba5313c595 "pdflatex"
-  "Relatorio.bbl" 0 -1 0 "biber Relatorio"
-  "Relatorio.out" 1769107005 11032 0ed4b311b7e87d835c620847837bb882 "pdflatex"
-  "Relatorio.tex" 1769106974 21056 51cd0ee03f9539cd4ddd6d0d9e2e5b04 ""
-  "c:/Users/Marti/Documents/QGS-Paper/LaTeX Report/Relatorio.tex" 1769106974 21056 51cd0ee03f9539cd4ddd6d0d9e2e5b04 ""
+  "Relatorio.aux" 1769107074 4737 1f649e99f099c55d126537520a0a2936 "pdflatex"
+  "Relatorio.bbl" 1769107067 2048 2e2a43bb0c95fb3d307fa24d6d4ad43a "biber Relatorio"
+  "Relatorio.out" 1769107074 8054 cc47968c44dd1148b4fdd64c9a4e4c1d "pdflatex"
+  "Relatorio.tex" 1769107059 8523 0088312610eaf20b127f5914c228aa20 ""
+  "c:/Users/Marti/Documents/QGS-Paper/LaTeX Report/Relatorio.tex" 1769107059 8523 0088312610eaf20b127f5914c228aa20 ""
   (generated)
   "Relatorio.aux"
   "Relatorio.bcf"
