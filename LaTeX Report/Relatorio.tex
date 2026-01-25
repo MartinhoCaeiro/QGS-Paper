@@ -105,16 +105,7 @@
 
 \begin{document}
 
-% Make the title
-\maketitle
 
-\begin{abstract}
-This paper presents a comprehensive analysis of Samsung's Quantum Galaxy framework \cite{basepaper}, which integrates Quantum Random Number Generation (QRNG) and Post-Quantum Cryptography (PQC) techniques to enhance mobile device security against emerging quantum computing threats. Through reverse engineering, digital forensics, and cryptographic analysis, we evaluate the effectiveness of these quantum-resistant mechanisms on commercial smartphone hardware. Our findings demonstrate that quantum-resistant cryptography is not only theoretically sound but also practically viable for widespread mobile device deployment, offering enhanced security while maintaining compatibility with existing communication standards. We discuss the methodology, present key findings regarding the integration of QRNG and PQC, and critically evaluate the research limitations and future directions for quantum-safe mobile security.
-\end{abstract}
-
-\begin{IEEEkeywords}
-Quantum random number generator (QRNG), post-quantum cryptography (PQC), reverse engineering, digital forensics, secure mobile communications, mobile application security, quantum-resistant cryptography.
-\end{IEEEkeywords}
 
 \section{Research Problem and Objectives}
 \label{research_problem}
@@ -147,26 +138,66 @@ could enhance security in mobile communications.
 The author has addressed this gap by developing a secure instant messaging and VoIP application that combines QRNG 
 with post-quantum cryptographic algorithms. 
 \subsection{What are the study's strength points?}
+The study's strength points are how the author has managed to take advantage of the already 
+existing hardware in the Samsung, and showing how it can be used to improve security 
+in mobile comunications, specially in instant messaging and VoIP applications, by that 
+is a solid and possible solution for the future of mobile security without making the 
+user waste more money when you can use the already existing hardware.
 
 \subsection{What are the study's weaknesses?}
+The study's weakness, is more a defect of Samsung than the author, because the QRNG chip is 
+very strong theorically, but is weak in practice, because when it was tested with NIST SP800-22 
+and Dieharder, it can generate very "1" bits in a row or alternating "0" and "1" bits, which 
+isn't good for a random number generator, because it can be predicted by an attacker.
+
+And this makes a problem for the author, because if the QRNG isn't good, the security of the 
+applications that use it, can be compromised and won't be as secure as it should be theoretically.
 
 \subsection{Which type of methodology was adopted?}
+The methodoly adopted was a dissection of the Samsung Quantum Galaxy's security features, focusing on the 
+integration of QRNG and PQC in mobile applications. That was done through digital forensics at the phone's 
+file system and reverse engineering of its binaries and Android applications, where they discovered the 
+mechanisms to invoke the chip's random byte generation capabilities.
 
-\subsection{Clearly identify the adopted research design method.}
+To be more specific, the author planned a three-phase approach: 
+\begin{itemize}
+    \item \textit{\textbf{Discover}}: Understand how the QRNG is integraded and how it can be accessed 
+    by applications. 
+    \item \textit{\textbf{Research}}: Evaluation of QRNG chip's performance, assets its 
+    randomness quality, and investigate its utilization in existing mobile applications.
+    \item \textit{\textbf{Development}}: After discovering that no meaningful use of the QRNG 
+    was being made, the author developed a secure instant messaging and VoIP application 
+    that combines QRNG with post-quantum cryptographic algorithms.
+\end{itemize}
+
 
 \subsection{Briefly explain the variable of analysis used on this study.}
-
-\subsection{Cleary identify the criteria/equations that were used to validade results.}
-
+The study used three test suites to evaluate the randomness quality of the QRNG chip:
+\begin{itemize}
+    \item \textit{\textbf{NIST SP800-90b}}: A standard for the generation of random numbers 
+    using deterministic and non-deterministic methods.
+    \item \textit{\textbf{NIST SP800-22}}: A widely used suite of statistical tests for 
+    evaluating the randomness of binary sequences.
+    \item \textit{\textbf{Dieharder}}: A comprehensive suite of statistical tests for 
+    random number generators, providing a more extensive analysis of randomness quality.
+\end{itemize}
 \subsection{Critically analyze the presented results}
+As we said before, the QRNG chip used in the Samsung Quantum Galaxy has some problems when 
+it comes to randomness quality, because when it was tested with NIST SP800-22 and Dieharder,
+so the results presented by the author are good and represent a good step forward in mobile 
+security, whoever it is limited by the quality of the QRNG chip used in the phone, because 
+if the QRNG isn't good, the security of the applications that use it. We are sure that if 
+the QRNG chip was better, the results would be even better. After all, the author was honest 
+about the problems of the QRNG chip, so we can trust the results presented.
 
 \subsection{What are the conclusions presented by the author?}
 The solution/conclusion that the author has achieved demonstrates that leveraging QRNG-generated randomness alongside
 PQC significantly improves security against emerging quantum threats, establishing a foundation for
 enhanced mobile data protection.
 \subsection{What is the contribution to the existing knowledge?}
-
-\subsection{Can you accept the findings as true? Discuss any failing and shortcomings of the method used to support the findings.}
+It shows that the integration of QRNG and PQC in mobile applications is feasible and 
+can be effectively implemented using existing hardware, paving the way for future advancements
+in mobile security technologies.
 
 \subsection{Summarize your conclusion on the analyzing the benchmark.}
 

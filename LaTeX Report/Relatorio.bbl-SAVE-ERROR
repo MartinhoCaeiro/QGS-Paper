@@ -16,5 +16,44 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{basepaper}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9b87e70987418cbb10fb7cf5d6a9d9ce}{%
+           family={Alibrahim},
+           familyi={A\bibinitperiod},
+           given={Omar},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{9b87e70987418cbb10fb7cf5d6a9d9ce}
+      \strng{fullhash}{9b87e70987418cbb10fb7cf5d6a9d9ce}
+      \strng{fullhashraw}{9b87e70987418cbb10fb7cf5d6a9d9ce}
+      \strng{bibnamehash}{9b87e70987418cbb10fb7cf5d6a9d9ce}
+      \strng{authorbibnamehash}{9b87e70987418cbb10fb7cf5d6a9d9ce}
+      \strng{authornamehash}{9b87e70987418cbb10fb7cf5d6a9d9ce}
+      \strng{authorfullhash}{9b87e70987418cbb10fb7cf5d6a9d9ce}
+      \strng{authorfullhashraw}{9b87e70987418cbb10fb7cf5d6a9d9ce}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{IEEE Access, vol. 13, pp. 73202 - 73218, 2025}
+      \field{title}{Unveiling Samsung Quantum Galaxy: Securing Smartphones With Quantum and Post-Quantum Cryptography}
+      \field{urlday}{21}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10974970
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10974970
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
