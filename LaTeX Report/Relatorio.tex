@@ -24,137 +24,68 @@
     \newpage
 }
 
-% Página de título principal
-\newcommand{\firsttitlepage}{
-    \begin{titlepage}
-        \centering
-        \vspace*{1cm}
-        
-        % Logos superior
-        \begin{figure}[h!]
-            \centering
-            \includegraphics[width=5cm]{Recursos/LOGO_IPB} % Substitua pelo caminho da imagem
-            \vspace{0.5cm}
-        \end{figure}
+% IEEE Title Page
+\title{Unveiling Samsung Quantum Galaxy: Securing Smartphones With Quantum and Post-Quantum Cryptography}
 
-        % Informações da instituição
-        \large\textbf{INSTITUTO POLITÉCNICO DE BEJA} \\
-        \large\textbf{Escola Superior de Tecnologia e Gestão} \\
-        \large\textbf{Mestrado em Engenharia de Segurança Informática} \\
-        \large\textbf{Direito na Segurança Informática e no Cibercrime} \\
-        
-        \vspace{2cm}
-        
-        % Título do projeto
-        {\LARGE \textbf{Unveiling Samsung Quantum Galaxy: Securing Smartphones With Quantum and Post-Quantum Cryptography}} \\
-        
-        \vspace{1.0cm}
-        
-        % Autores
-        \large Martinho José Novo Caeiro - 23917 \\
-        \large Paulo António Tavares Abade - 23919 \\
-        
-        \vfill
-        
-        % Logo inferior
-        \begin{figure}[h!]
-            \centering
-            \includegraphics[width=5cm]{Recursos/IPBejaESTIG.jpg} % Substitua pelo caminho da imagem
-        \end{figure}
-        
-        \vspace{1cm}
-        
-        % Local e data
-        {\large Beja, janeiro de 2026}
-    \end{titlepage}
-}
-
-\newcommand{\secondtitlepage}{
-    \begin{titlepage}
-        \centering
-        \vspace*{1cm}
-        
-        % Informações da instituição
-        \large\textbf{INSTITUTO POLITÉCNICO DE BEJA} \\
-        \large\textbf{Escola Superior de Tecnologia e Gestão} \\
-        \large\textbf{Mestrado em Engenharia de Segurança Informática} \\
-        \large\textbf{Direito na Segurança Informática e no Cibercrime} \\
-        
-        \vspace{2cm}
-        
-        % Título do projeto
-        {\LARGE \textbf{Unveiling Samsung Quantum Galaxy: Securing Smartphones With Quantum and Post-Quantum Cryptography}} \\
-        
-        \vspace{1.5cm}
-        
-        % Autores
-        \large Martinho José Novo Caeiro - 23917 \\
-        \large Paulo António Tavares Abade - 23919 \\
-
-        \vspace{2cm}
-
-        % Orientador
-        \large Orientador:  Rui Miguel Silva \& Daniel José Da Graça Peceguinha Franco \\
-        
-        \vfill
-        
-        % Local e data
-        {\large Beja, janeiro de 2026}
-    \end{titlepage}
-}
+\author{Martinho José Novo Caeiro (23917)
+        and Paulo António Tavares Abade (23919)\thanks{Both authors are with the Instituto Politécnico de Beja, Escola Superior de Tecnologia e Gestão, Mestrado em Engenharia de Segurança Informática, Beja, Portugal. Supervisors: Rui Miguel Silva and Daniel José Da Graça Peceguinha Franco.}}
 
 \begin{document}
 
-
+\maketitle
 
 \section{Research Problem and Objectives}
 \label{research_problem}
 
 \subsection{Problem Being Addressed}
 
-The article addresses the critical need to secure modern smartphones against quantum computing threats while maintaining compatibility with current cryptographic systems \cite{basepaper}. The research problem focuses on analyzing Samsung's Quantum Galaxy implementation, which integrates both Quantum Random Number Generation (QRNG) and Post-Quantum Cryptography (PQC) techniques to enhance mobile device security. This problem is highly relevant as quantum computers pose an existential threat to current RSA and ECC-based encryption schemes. The clarity of the problem is well-established through the investigation of both the security mechanisms employed and their practical implementation on consumer mobile devices, making it accessible and important for the cybersecurity and mobile technology communities.
+This article addresses the critical need to secure modern smartphones against quantum computing threats while maintaining compatibility with current cryptographic systems \cite{basepaper}. 
+The research focuses on analyzing Samsung's Quantum Galaxy implementation, which integrates both Quantum Random Number Generation (QRNG) and Post-Quantum Cryptography (PQC) techniques to enhance mobile device security. 
+This research is highly relevant as quantum computers pose an existential threat to current RSA and ECC-based encryption schemes. The clarity of the problem is well-established through the investigation of both the security 
+mechanisms employed and their practical implementation on consumer mobile devices, making it accessible and important for the cybersecurity and mobile technology communities.
 
-\subsection{Research Objectives and Hypothesis}
-
-The primary research objectives are to:
 
 \section{Article Analysis}\label{intro}
-The analysis of the article will be make through the answers to the questions on the \textit{template} that was provided by the professor.
+This article will be analyzed by answering the questions on the \textit{template} provided by the professor.
 
-\subsection{What is the name of the research?}
+\subsection{Basic Research Information}
 The name of the research is "Unveiling Samsung Quantum Galaxy: Securing Smartphones With Quantum and Post-Quantum Cryptography".
-\subsection{Where the research was published?}
-The research was published in the journal "IEEE Access", which is a multidisciplinary, open access journal of the Institute of Electrical and Electronics Engineers (IEEE).
-\subsection{Who is the author?}
-The name of the author is Omar Alibrahim, a researcher with support from Kuwait Foundation for the Advancemente of Sciences (KFAS). The 
+
+It was published in the journal "IEEE Access", which is a multidisciplinary, open access journal of the Institute of Electrical and Electronics Engineers (IEEE).
+
+The author is Omar Alibrahim, a researcher with support from Kuwait Foundation for the Advancement of Sciences (KFAS). The 
 research was published on 2nd of May 2025.
-\subsection{What's the theory of research?}
-The theory of research is based on the integration of quantum tecnologies in enhancing mobile communication security, all thanks to the new 
+
+%---------------------------------------------------------------------------------------------------------------------------
+\subsection{Research Theory}
+The theory behind the research is based on the integration of quantum technologies in enhancing mobile communication security, all thanks to the new 
 features of the Samsung Galaxy Series. 
-\subsection{What's the problem being addressed in this study?}
+
 The study explains that Samsung has a lack of effective implementation of Quantum Random Number Generator (QRNG) utilization in existing applications, something that 
 could enhance security in mobile communications. 
-\subsection{What are the objectives addressed?}
+
 The author has addressed this gap by developing a secure instant messaging and VoIP application that combines QRNG 
-with post-quantum cryptographic algorithms. 
-\subsection{What are the study's strength points?}
-The study's strength points are how the author has managed to take advantage of the already 
-existing hardware in the Samsung, and showing how it can be used to improve security 
-in mobile comunications, specially in instant messaging and VoIP applications, by that 
+with post-quantum cryptographic algorithms.
+
+%---------------------------------------------------------------------------------------------------------------------------
+\subsection{Strengths and Weaknesses}
+The study's strength points are based on how the author has managed to take advantage of the already 
+existing hardware in Samsung Devices, and showing how it can be used to improve security 
+in mobile communications, specially in instant messaging and VoIP applications, by that 
 is a solid and possible solution for the future of mobile security without making the 
 user waste more money when you can use the already existing hardware.
 
-\subsection{What are the study's weaknesses?}
-The study's weakness, is more a defect of Samsung than the author, because the QRNG chip is 
-very strong theorically, but is weak in practice, because when it was tested with NIST SP800-22 
-and Dieharder, it can generate very "1" bits in a row or alternating "0" and "1" bits, which 
+The study's weakness are based on a Samsung defect rather than the author, because the QRNG chip is 
+very strong theoretically, but is weak in practice, because when it was tested with NIST SP800-22 
+and Dieharder, it can generate loads of "1" bits in a row or alternating "0" and "1" bits, which 
 isn't good for a random number generator, because it can be predicted by an attacker.
 
-And this makes a problem for the author, because if the QRNG isn't good, the security of the 
+And this makes it difficult for the author, because if the QRNG isn't good, the security of the 
 applications that use it, can be compromised and won't be as secure as it should be theoretically.
 
-\subsection{Which type of methodology was adopted?}
-The methodoly adopted was a dissection of the Samsung Quantum Galaxy's security features, focusing on the 
+%---------------------------------------------------------------------------------------------------------------------------
+\subsection{Adopted Methodology}
+The methodology adopted was a dissection of the Samsung Quantum Galaxy's security features, focusing on the 
 integration of QRNG and PQC in mobile applications. That was done through digital forensics at the phone's 
 file system and reverse engineering of its binaries and Android applications, where they discovered the 
 mechanisms to invoke the chip's random byte generation capabilities.
@@ -170,8 +101,7 @@ To be more specific, the author planned a three-phase approach:
     that combines QRNG with post-quantum cryptographic algorithms.
 \end{itemize}
 
-
-\subsection{Briefly explain the variable of analysis used on this study.}
+\subsection{Benchmark Used}
 The study used three test suites to evaluate the randomness quality of the QRNG chip:
 \begin{itemize}
     \item \textit{\textbf{NIST SP800-90b}}: A standard for the generation of random numbers 
@@ -181,31 +111,27 @@ The study used three test suites to evaluate the randomness quality of the QRNG 
     \item \textit{\textbf{Dieharder}}: A comprehensive suite of statistical tests for 
     random number generators, providing a more extensive analysis of randomness quality.
 \end{itemize}
-\subsection{Critically analyze the presented results}
+
+%---------------------------------------------------------------------------------------------------------------------------
+\subsection{Results Presented}
 As we said before, the QRNG chip used in the Samsung Quantum Galaxy has some problems when 
 it comes to randomness quality, because when it was tested with NIST SP800-22 and Dieharder,
 so the results presented by the author are good and represent a good step forward in mobile 
 security, whoever it is limited by the quality of the QRNG chip used in the phone, because 
-if the QRNG isn't good, the security of the applications that use it. We are sure that if 
+if the QRNG isn't good, the security of the applications that use it aren't going to be solid. We are sure that if 
 the QRNG chip was better, the results would be even better. After all, the author was honest 
 about the problems of the QRNG chip, so we can trust the results presented.
 
-\subsection{What are the conclusions presented by the author?}
+\subsection{Conclusions Presented}
 The solution/conclusion that the author has achieved demonstrates that leveraging QRNG-generated randomness alongside
 PQC significantly improves security against emerging quantum threats, establishing a foundation for
 enhanced mobile data protection.
-\subsection{What is the contribution to the existing knowledge?}
+
+\subsection{Contribution to Existing Knowledge}
 It shows that the integration of QRNG and PQC in mobile applications is feasible and 
 can be effectively implemented using existing hardware, paving the way for future advancements
 in mobile security technologies.
 
-\subsection{Summarize your conclusion on the analyzing the benchmark.}
-
-\subsection{What is the main gap that you have identified on this study, and that you are willing to address on your research?}
-
-\subsection{Which part of the benchmark will you use in your study, in order to compare your results with their outcomes?}
-
-\subsection{Conclude by summarizing the Research Problem + Research Gap+ Purpose of the study (MAXIMIUM 40 WORDS)}
 %---------------------------------------------------------------------------------------------------------------------------
 
 \renewcommand{\refname}{References}
